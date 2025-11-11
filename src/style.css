@@ -608,7 +608,7 @@ nav {
 
   .sound-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 35px 45px;
+    gap: 35px 60px;
     padding: 0 10px;
     max-width: 100%;
     justify-items: center;
