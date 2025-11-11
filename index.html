@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambient Sound Mixer</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="container">
+          <div class="global-volume">
+            <input type="range" min="0" max="100" value="70" class="slider" id="masterVolume">
+            <button class="mute-btn" id="muteBtn">MUTE</button>
+          </div>
+          <nav>
+            <a href="#" class="nav-link">Blog</a>
+            <a href="#" class="nav-link">Get Updates</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Log in</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="title">
+        <h1>AMBIENT SOUNDS</h1>
+        <p>Mix ambient sounds to wash away distraction.</p>
+      </div>
+
+      <div class="play-controls">
+        <button class="control-btn meander-btn" id="meanderBtn" title="Meander mode"></button>
+        <button class="play-btn" id="playBtn">
+          <div class="play-icon"></div>
+        </button>
+        <button class="control-btn reset-btn" id="resetBtn" title="Reset all"></button>
+      </div>
+
+      <div class="row-controls">
+        <button class="row-control-btn">TIMERS</button>
+        <button class="row-control-btn">MIXES</button>
+        <button class="row-control-btn">SHARE</button>
+      </div>
+
+      <div class="sound-list">
+        <div class="sound-container" data-sound="rain">
+          <div class="sound-icon rain-icon"></div>
+          <h3>Rain</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="thunder">
+          <div class="sound-icon thunder-icon"></div>
+          <h3>Thunder</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="waves">
+          <div class="sound-icon waves-icon"></div>
+          <h3>Waves</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="wind">
+          <div class="sound-icon wind-icon"></div>
+          <h3>Wind</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="fire">
+          <div class="sound-icon fire-icon"></div>
+          <h3>Fire</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="birds">
+          <div class="sound-icon birds-icon"></div>
+          <h3>Birds</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="crickets">
+          <div class="sound-icon crickets-icon"></div>
+          <h3>Crickets</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="coffee">
+          <div class="sound-icon coffee-icon"></div>
+          <h3>Coffee Shop</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="whitenoise">
+          <div class="sound-icon whitenoise-icon"></div>
+          <h3>White Noise</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
