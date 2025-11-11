@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ambient Sound Mixer</title>
+    <title>Relax Sound</title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
@@ -15,17 +15,15 @@
             <button class="mute-btn" id="muteBtn">MUTE</button>
           </div>
           <nav>
-            <a href="#" class="nav-link">Blog</a>
-            <a href="#" class="nav-link">Get Updates</a>
             <a href="#" class="nav-link">About</a>
-            <a href="#" class="nav-link">Log in</a>
           </nav>
         </div>
       </header>
 
       <div class="title">
-        <h1>AMBIENT SOUNDS</h1>
-        <p>Mix ambient sounds to wash away distraction.</p>
+        <h1>RELAX SOUND</h1>
+
+        <p>Escape the noise. Embrace the calm.</p>
       </div>
 
       <div class="play-controls">
@@ -34,12 +32,6 @@
           <div class="play-icon"></div>
         </button>
         <button class="control-btn reset-btn" id="resetBtn" title="Reset all"></button>
-      </div>
-
-      <div class="row-controls">
-        <button class="row-control-btn">TIMERS</button>
-        <button class="row-control-btn">MIXES</button>
-        <button class="row-control-btn">SHARE</button>
       </div>
 
       <div class="sound-list">
@@ -88,6 +80,12 @@
         <div class="sound-container" data-sound="coffee">
           <div class="sound-icon coffee-icon"></div>
           <h3>Coffee Shop</h3>
+          <input type="range" min="0" max="100" value="0" class="sound-slider">
+        </div>
+
+        <div class="sound-container" data-sound="singingBowl">
+          <div class="sound-icon whitenoise-icon"></div>
+          <h3>Singing Bowl</h3>
           <input type="range" min="0" max="100" value="0" class="sound-slider">
         </div>
 
