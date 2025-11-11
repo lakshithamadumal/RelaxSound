@@ -1,93 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Relax Sound</title>
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
-    <div id="app">
-      <div class="title">
-        <h1>RELAX SOUND</h1>
-        <p>Escape the noise. Embrace the calm.</p>
-      </div>
-
-      <div class="play-controls">
-        <button class="control-btn mute-control-btn" id="muteControlBtn" title="Mute/Unmute"></button>
-        <button class="play-btn" id="playBtn">
-          <div class="play-icon"></div>
-        </button>
-        <button class="control-btn reset-btn" id="resetBtn" title="Reset all"></button>
-      </div>
-
-      <div class="master-volume-container">
-        <input type="range" min="0" max="100" value="70" class="slider" id="masterVolume">
-      </div>
-
-      <div class="sound-list">
-        <div class="sound-container" data-sound="rain">
-          <div class="sound-icon rain-icon"></div>
-          <h3>Rain</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Primary Meta Tags -->
+        <title>RelaxSound | Free Ambient & Meditation Sounds for Relaxation, Sleep & Focus</title>
+        <meta name="title" content="RelaxSound | Free Ambient & Meditation Sounds for Relaxation, Sleep & Focus">
+        <meta name="description" content="RelaxSound is a 100% free platform to listen to relaxing ambient and meditation sounds. Mix rain, ocean, wind, fire, and nature sounds to relax, sleep better, or focus deeply. Discover calmness through natural sound therapy.">
+        <meta name="keywords" content="relax sound, meditation sounds, relaxing music, ambient noise, free nature sounds, sleep sounds, focus sounds, relaxation app, stress relief, mindfulness audio">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Laky">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://relaxsound.vercel.app/">
+        <meta property="og:title" content="RelaxSound | Free Meditation & Ambient Sounds">
+        <meta property="og:description" content="Listen to free relaxing sounds for meditation, sleep, and focus. Combine rain, waves, wind, and more to create your peaceful soundscape. 100% free and ad-free.">
+        <meta property="og:image" content="https://relaxsound.vercel.app/assets/relaxsound-preview.jpg">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://relaxsound.vercel.app/">
+        <meta name="twitter:title" content="RelaxSound | Free Meditation & Ambient Sounds">
+        <meta name="twitter:description" content="Relax your mind with nature-inspired ambient and meditation sounds. 100% free to use — calm, focus, or sleep better today.">
+        <meta name="twitter:image" content="https://relaxsound.vercel.app/assets/relaxsound-preview.jpg">
+        
+        <link rel="icon" type="image/png" href="assets/icon.png">
+        
+        <link rel="stylesheet" href="/src/style.css">
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">
+                <h1>RELAX SOUND</h1>
+                <p>Escape the noise. Embrace the calm.</p>
+            </div>
+            <div class="play-controls">
+                <button class="control-btn mute-control-btn" id="muteControlBtn" title="Mute/Unmute"></button>
+                <button class="play-btn" id="playBtn">
+                    <div class="play-icon"></div>
+                </button>
+                <button class="control-btn reset-btn" id="resetBtn" title="Reset all"></button>
+            </div>
+            <div class="master-volume-container">
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="70"
+                    class="slider"
+                    id="masterVolume"
+                >
+            </div>
+            <div class="sound-list">
+                <div class="sound-container" data-sound="rain">
+                    <div class="sound-icon rain-icon"></div>
+                    <h3>Rain</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="thunder">
+                    <div class="sound-icon thunder-icon"></div>
+                    <h3>Thunder</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="waves">
+                    <div class="sound-icon waves-icon"></div>
+                    <h3>Waves</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="wind">
+                    <div class="sound-icon wind-icon"></div>
+                    <h3>Wind</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="fire">
+                    <div class="sound-icon fire-icon"></div>
+                    <h3>Fire</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="birds">
+                    <div class="sound-icon birds-icon"></div>
+                    <h3>Birds</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="crickets">
+                    <div class="sound-icon crickets-icon"></div>
+                    <h3>Crickets</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="coffee">
+                    <div class="sound-icon coffee-icon"></div>
+                    <h3>Coffee Shop</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="singingBowl">
+                    <div class="sound-icon singingBowl-icon"></div>
+                    <h3>Singing Bowl</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+                <div class="sound-container" data-sound="whitenoise">
+                    <div class="sound-icon whitenoise-icon"></div>
+                    <h3>White Noise</h3>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="sound-slider"
+                    >
+                </div>
+            </div>
         </div>
-
-        <div class="sound-container" data-sound="thunder">
-          <div class="sound-icon thunder-icon"></div>
-          <h3>Thunder</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="waves">
-          <div class="sound-icon waves-icon"></div>
-          <h3>Waves</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="wind">
-          <div class="sound-icon wind-icon"></div>
-          <h3>Wind</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="fire">
-          <div class="sound-icon fire-icon"></div>
-          <h3>Fire</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="birds">
-          <div class="sound-icon birds-icon"></div>
-          <h3>Birds</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="crickets">
-          <div class="sound-icon crickets-icon"></div>
-          <h3>Crickets</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="coffee">
-          <div class="sound-icon coffee-icon"></div>
-          <h3>Coffee Shop</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="singingBowl">
-          <div class="sound-icon singingBowl-icon"></div>
-          <h3>Singing Bowl</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-
-        <div class="sound-container" data-sound="whitenoise">
-          <div class="sound-icon whitenoise-icon"></div>
-          <h3>White Noise</h3>
-          <input type="range" min="0" max="100" value="0" class="sound-slider">
-        </div>
-      </div>
-    </div>
-
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>
