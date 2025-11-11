@@ -4,16 +4,33 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: #12100a; /* highlight color */
+  color: #fff; /* text color while selected */
+}
+
 body {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: url('https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170') center/cover no-repeat fixed;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: url("https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170")
+    center/cover no-repeat fixed;
   color: white;
   min-height: 100vh;
   position: relative;
+  -ms-overflow-style: none; /* for Internet Explorer and Edge */
+  scrollbar-width: none; /* for Firefox */
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -174,7 +191,7 @@ nav {
 }
 
 .reset-btn::before {
-  content: '↺';
+  content: "↺";
   font-size: 28px;
   color: white;
 }
@@ -187,13 +204,15 @@ nav {
 }
 
 .mute-control-btn::before {
-  content: '🔊';
+  content: "🔊";
   font-size: 28px;
+  filter: brightness(0) invert(1);
 }
 
 .mute-control-btn.muted::before {
-  content: '🔇';
+  content: "🔇";
   font-size: 28px;
+  filter: brightness(0) invert(1);
 }
 
 .play-btn {
@@ -236,7 +255,7 @@ nav {
 
 .play-btn.playing .play-icon::before,
 .play-btn.playing .play-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   height: 20px;
@@ -318,7 +337,7 @@ nav {
 
 /* Sound icons - custom CSS drawings */
 .rain-icon::before {
-  content: '💧';
+  content: "🌧️";
   font-size: 48px;
   position: absolute;
   top: 50%;
@@ -328,7 +347,7 @@ nav {
 }
 
 .thunder-icon::before {
-  content: '⚡';
+  content: "⚡";
   font-size: 48px;
   position: absolute;
   top: 50%;
@@ -338,90 +357,83 @@ nav {
 }
 
 .waves-icon::before {
-  content: '∼';
+  content: "🌊";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  filter: brightness(0) invert(1);
 }
 
 .wind-icon::before {
-  content: '≈';
+  content: "🌬️";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  filter: brightness(0) invert(1);
 }
 
 .fire-icon::before {
-  content: '▲';
+  content: "🔥";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  filter: brightness(0) invert(1);
 }
 
 .birds-icon::before {
-  content: '∧';
+  content: "🐦";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  filter: brightness(0) invert(1);
 }
 
 .crickets-icon::before {
-  content: '◎';
+  content: "🦗";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  filter: brightness(0) invert(1);
 }
 
 .coffee-icon::before {
-  content: '◡';
+  content: "🍵";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  filter: brightness(0) invert(1);
 }
 
 .singingBowl-icon::before {
-  content: '◐';
+  content: "🧘‍♂️";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  filter: brightness(0) invert(1);
 }
 
 .whitenoise-icon::before {
-  content: '※';
+  content: "░";
   font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  filter: brightness(0) invert(1);
 }
 
 .sound-container h3 {
