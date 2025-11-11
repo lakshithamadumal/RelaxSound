@@ -317,224 +317,111 @@ nav {
 }
 
 /* Sound icons - custom CSS drawings */
-.rain-icon::before,
-.rain-icon::after {
-  content: '';
-  position: absolute;
-}
-
 .rain-icon::before {
-  width: 35px;
-  height: 20px;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 20px 20px 0 0;
-  border: 2px solid white;
-  border-bottom: none;
-}
-
-.rain-icon::after {
-  width: 2px;
-  height: 15px;
-  background: white;
-  top: 55%;
-  left: 45%;
-  box-shadow: 8px 0 0 white, 16px 0 0 white;
-}
-
-.thunder-icon::before {
-  content: '⚡';
-  font-size: 36px;
+  content: '💧';
+  font-size: 48px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+  filter: brightness(0) invert(1);
 }
 
-.waves-icon::before,
-.waves-icon::after {
-  content: '';
+.thunder-icon::before {
+  content: '⚡';
+  font-size: 48px;
   position: absolute;
-  width: 40px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
-  border-top: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0) invert(1);
 }
 
 .waves-icon::before {
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.waves-icon::after {
-  top: 48%;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0.7);
-}
-
-.wind-icon::before,
-.wind-icon::after {
-  content: '';
+  content: '∼';
+  font-size: 48px;
   position: absolute;
-  height: 2px;
-  background: white;
-  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .wind-icon::before {
-  width: 35px;
-  top: 38%;
+  content: '≈';
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 8px 0 white, 0 16px 0 white;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .fire-icon::before {
-  content: '';
+  content: '▲';
+  font-size: 48px;
   position: absolute;
-  top: 28%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 35px solid white;
-  border-radius: 50% 50% 0 0;
-}
-
-.fire-icon::after {
-  content: '';
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 20px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50% 50% 0 0;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .birds-icon::before {
-  content: '';
+  content: '∧';
+  font-size: 48px;
   position: absolute;
-  top: 45%;
-  left: 35%;
-  width: 15px;
-  height: 2px;
-  background: white;
-  border-radius: 50% 50% 0 0;
-  transform: rotate(-20deg);
-  box-shadow: 10px -5px 0 white;
-}
-
-.birds-icon::after {
-  content: '';
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  width: 15px;
-  height: 2px;
-  background: white;
-  border-radius: 50% 50% 0 0;
-  transform: rotate(20deg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .crickets-icon::before {
-  content: '';
+  content: '◎';
+  font-size: 48px;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50% 50% 40% 40%;
-}
-
-.crickets-icon::after {
-  content: '';
-  position: absolute;
-  top: 42%;
-  left: 30%;
-  width: 12px;
-  height: 2px;
-  background: white;
-  box-shadow: 28px 0 0 white;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .coffee-icon::before {
-  content: '';
+  content: '◡';
+  font-size: 48px;
   position: absolute;
-  top: 38%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 25px;
-  border: 2px solid white;
-  border-radius: 0 0 8px 8px;
-  border-top: none;
-}
-
-.coffee-icon::after {
-  content: '';
-  position: absolute;
-  top: 35%;
-  right: 30%;
-  width: 8px;
-  height: 12px;
-  border: 2px solid white;
-  border-radius: 0 40% 40% 0;
-  border-left: none;
-}
-
-.whitenoise-icon::before {
-  content: '';
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 35px;
-  height: 25px;
-  border: 2px solid white;
-  border-radius: 3px;
-  background: repeating-linear-gradient(
-    0deg,
-    white 0px,
-    white 1px,
-    transparent 1px,
-    transparent 3px
-  );
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .singingBowl-icon::before {
-  content: '';
+  content: '◐';
+  font-size: 48px;
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 30px;
-  border: 2px solid white;
-  border-radius: 0 0 20px 20px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
-.singingBowl-icon::after {
-  content: '';
+.whitenoise-icon::before {
+  content: '※';
+  font-size: 48px;
   position: absolute;
-  top: 32%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 35px;
-  height: 8px;
-  border: 2px solid white;
-  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .sound-container h3 {
