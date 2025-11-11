@@ -51,7 +51,7 @@ body::before {
 }
 
 .slider {
-  width: 120px;
+  width: 500px;
   height: 4px;
   -webkit-appearance: none;
   appearance: none;
@@ -149,6 +149,15 @@ nav {
   margin: 40px 0;
 }
 
+/* Master Volume Container */
+.master-volume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0 60px;
+}
+
 .control-btn {
   width: 50px;
   height: 50px;
@@ -164,24 +173,27 @@ nav {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.meander-btn::before {
-  content: '~';
-  font-size: 24px;
-  color: white;
-}
-
-.meander-btn.active {
-  background: white;
-}
-
-.meander-btn.active::before {
-  color: #333;
-}
-
 .reset-btn::before {
   content: '↺';
   font-size: 28px;
   color: white;
+}
+
+.mute-control-btn {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mute-control-btn::before {
+  content: '🔊';
+  font-size: 28px;
+}
+
+.mute-control-btn.muted::before {
+  content: '🔇';
+  font-size: 28px;
 }
 
 .play-btn {
@@ -499,6 +511,30 @@ nav {
     transparent 1px,
     transparent 3px
   );
+}
+
+.singingBowl-icon::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 0 0 20px 20px;
+}
+
+.singingBowl-icon::after {
+  content: '';
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35px;
+  height: 8px;
+  border: 2px solid white;
+  border-radius: 50%;
 }
 
 .sound-container h3 {

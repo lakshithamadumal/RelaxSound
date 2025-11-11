@@ -10,6 +10,7 @@ const audioSources = {
   birds: 'https://cdn.pixabay.com/download/audio/2022/03/09/audio_c610232532.mp3',
   crickets: 'https://cdn.pixabay.com/download/audio/2022/03/10/audio_88c8a99f25.mp3',
   coffee: 'https://cdn.pixabay.com/download/audio/2023/10/30/audio_13ca089da8.mp3',
+  singingBowl: 'https://cdn.pixabay.com/download/audio/2022/12/22/audio_9e309eb732.mp3',
   whitenoise: 'https://cdn.pixabay.com/download/audio/2023/03/28/audio_d0eee1551f.mp3',
 };
 
@@ -18,8 +19,6 @@ class AmbientSoundMixer {
   private isPlaying = false;
   private isMuted = false;
   private masterVolume = 0.7;
-  private meanderActive = false;
-  private meanderInterval: number | null = null;
 
   constructor() {
     this.initializeAudio();
@@ -47,17 +46,17 @@ class AmbientSoundMixer {
       this.updateAllVolumes();
     });
 
-    // Mute button
+    // Mute button in header
     const muteBtn = document.getElementById('muteBtn') as HTMLButtonElement;
     muteBtn?.addEventListener('click', () => this.toggleMute());
+
+    // Mute button in controls
+    const muteControlBtn = document.getElementById('muteControlBtn') as HTMLButtonElement;
+    muteControlBtn?.addEventListener('click', () => this.toggleMute());
 
     // Reset button
     const resetBtn = document.getElementById('resetBtn') as HTMLButtonElement;
     resetBtn?.addEventListener('click', () => this.reset());
-
-    // Meander button
-    const meanderBtn = document.getElementById('meanderBtn') as HTMLButtonElement;
-    meanderBtn?.addEventListener('click', () => this.toggleMeander());
 
     // Individual sound sliders
     document.querySelectorAll('.sound-container').forEach((container) => {
@@ -120,6 +119,7 @@ class AmbientSoundMixer {
   private toggleMute() {
     this.isMuted = !this.isMuted;
     const muteBtn = document.getElementById('muteBtn') as HTMLButtonElement;
+    const muteControlBtn = document.getElementById('muteControlBtn') as HTMLButtonElement;
 
     this.audioElements.forEach((audio) => {
       audio.muted = this.isMuted;
@@ -127,8 +127,10 @@ class AmbientSoundMixer {
 
     if (this.isMuted) {
       muteBtn.classList.add('active');
+      muteControlBtn.classList.add('muted');
     } else {
       muteBtn.classList.remove('active');
+      muteControlBtn.classList.remove('muted');
     }
   }
 
@@ -163,48 +165,6 @@ class AmbientSoundMixer {
     this.audioElements.forEach((audio) => {
       audio.volume = 0;
     });
-
-    if (this.meanderActive) {
-      this.toggleMeander();
-    }
-  }
-
-  private toggleMeander() {
-    this.meanderActive = !this.meanderActive;
-    const meanderBtn = document.getElementById('meanderBtn') as HTMLButtonElement;
-
-    if (this.meanderActive) {
-      meanderBtn.classList.add('active');
-      this.startMeander();
-    } else {
-      meanderBtn.classList.remove('active');
-      this.stopMeander();
-    }
-  }
-
-  private startMeander() {
-    this.meanderInterval = window.setInterval(() => {
-      document.querySelectorAll('.sound-slider').forEach((slider) => {
-        const container = slider.closest('.sound-container');
-        const soundName = container?.getAttribute('data-sound');
-        const currentValue = Number.parseInt((slider as HTMLInputElement).value);
-
-        if (currentValue > 0 && soundName) {
-          // Random fluctuation ±10%
-          const fluctuation = (Math.random() - 0.5) * 20;
-          const newValue = Math.max(0, Math.min(100, currentValue + fluctuation));
-          (slider as HTMLInputElement).value = newValue.toString();
-          this.setSoundVolume(soundName, newValue / 100);
-        }
-      });
-    }, 2000);
-  }
-
-  private stopMeander() {
-    if (this.meanderInterval !== null) {
-      clearInterval(this.meanderInterval);
-      this.meanderInterval = null;
-    }
   }
 }
 
