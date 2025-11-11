@@ -543,7 +543,7 @@ nav {
     margin: 40px auto;
     padding: 0 15px;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 25px;
+    gap: 40px 45px;
     padding-bottom: 80px;
     justify-items: center;
     align-items: start;
