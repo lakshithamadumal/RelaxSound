@@ -2,16 +2,16 @@ import './style.css';
 
 // Audio sources - using free ambient sounds
 const audioSources = {
-  rain: 'https://cdn.pixabay.com/download/audio/2022/05/13/audio_257112ce97.mp3',
-  thunder: 'https://cdn.pixabay.com/download/audio/2022/03/10/audio_4a465d02ac.mp3',
-  waves: 'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3',
-  wind: 'https://cdn.pixabay.com/download/audio/2021/08/04/audio_12b0c7443c.mp3',
-  fire: 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_7c3e5d0ee0.mp3',
-  birds: 'https://cdn.pixabay.com/download/audio/2022/03/09/audio_c610232532.mp3',
-  crickets: 'https://cdn.pixabay.com/download/audio/2022/03/10/audio_88c8a99f25.mp3',
-  coffee: 'https://cdn.pixabay.com/download/audio/2023/10/30/audio_13ca089da8.mp3',
-  singingBowl: 'https://cdn.pixabay.com/download/audio/2022/12/22/audio_9e309eb732.mp3',
-  whitenoise: 'https://cdn.pixabay.com/download/audio/2023/03/28/audio_d0eee1551f.mp3',
+  rain: 'https://st2.asoftmurmur.com/assets/p/content/rain/main-rain.mp4',
+  thunder: 'https://st2.asoftmurmur.com/assets/p/content/thunder/main-thunder.mp4',
+  waves: 'https://st3.asoftmurmur.com/assets/p/content/waves/main-waves.mp4',
+  wind: 'https://st2.asoftmurmur.com/assets/p/content/wind/main-wind.mp4',
+  fire: 'https://st2.asoftmurmur.com/assets/p/content/fire/main-fire.mp4',
+  birds: 'https://st3.asoftmurmur.com/assets/p/content/birds/main-birds.mp4',
+  crickets: 'https://st3.asoftmurmur.com/assets/p/content/crickets/main-crickets.mp4',
+  coffee: 'https://st3.asoftmurmur.com/assets/p/content/people/main-people.mp4',
+  singingBowl: 'https://st1.asoftmurmur.com/assets/p/content/sbowl/main-sbowl.mp4',
+  whitenoise: 'https://st3.asoftmurmur.com/assets/p/content/whitenoise/main-whitenoise.mp4',
 };
 
 class AmbientSoundMixer {
