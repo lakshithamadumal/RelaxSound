@@ -161,6 +161,17 @@
                         class="sound-slider"
                     >
                 </div>
+                    <!-- Floating Info Button -->
+                    <button id="infoFloatBtn" class="info-float-btn" aria-label="Project info" title="Info">i</button>
+
+                    <!-- Info Modal -->
+                    <div id="infoModal" class="info-modal" aria-hidden="true">
+                        <div class="info-modal-content" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+                            <button class="info-close-btn" id="infoCloseBtn" aria-label="Close info">×</button>
+                            <h4 id="infoTitle">⚠️ Disclaimer</h4>
+                            <p>This project is for educational purposes only. All sounds belong to A Soft Murmur (Sleepy Rabbit LLC).</p>
+                        </div>
+                    </div>
             </div>
         </div>
         <script type="module" src="/src/main.ts"></script>

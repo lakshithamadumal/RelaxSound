@@ -446,6 +446,81 @@ nav {
   width: 150px;
 }
 
+/* Floating Info Button */
+.info-float-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.45);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1200;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Info modal overlay */
+.info-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1300;
+}
+
+.info-modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.info-modal-content {
+  background: rgba(20,20,20,0.95);
+  color: #fff;
+  padding: 16px 18px;
+  border-radius: 10px;
+  max-width: 420px;
+  width: calc(100% - 40px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  position: relative;
+}
+
+.info-modal-content h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.info-modal-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.info-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .info-float-btn { right: 12px; bottom: 12px; width: 40px; height: 40px; font-size: 16px; }
+  .info-modal-content { padding: 12px; max-width: 340px; }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .title h1 {

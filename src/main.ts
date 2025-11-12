@@ -84,6 +84,39 @@ class AmbientSoundMixer {
         }
       });
     });
+
+    // Info modal / floating button listeners
+    const infoBtn = document.getElementById('infoFloatBtn') as HTMLButtonElement | null;
+    const infoModal = document.getElementById('infoModal') as HTMLDivElement | null;
+    const infoClose = document.getElementById('infoCloseBtn') as HTMLButtonElement | null;
+
+    const openInfo = () => {
+      if (!infoModal) return;
+      infoModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      // move focus into the modal for accessibility
+      infoClose?.focus();
+    };
+
+    const closeInfo = () => {
+      if (!infoModal) return;
+      infoModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      infoBtn?.focus();
+    };
+
+    infoBtn?.addEventListener('click', openInfo);
+    infoClose?.addEventListener('click', closeInfo);
+
+    // close when clicking outside content
+    infoModal?.addEventListener('click', (ev) => {
+      if (ev.target === infoModal) closeInfo();
+    });
+
+    // close on Escape
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape') closeInfo();
+    });
   }
 
   private togglePlay() {
