@@ -9,7 +9,7 @@
         <meta name="description" content="RelaxSound is a 100% free platform to listen to relaxing ambient and meditation sounds. Mix rain, ocean, wind, fire, and nature sounds to relax, sleep better, or focus deeply. Discover calmness through natural sound therapy.">
         <meta name="keywords" content="relax sound, meditation sounds, relaxing music, ambient noise, free nature sounds, sleep sounds, focus sounds, relaxation app, stress relief, mindfulness audio">
         <meta name="robots" content="index, follow">
-        <meta name="author" content="RelaxSound">
+        <meta name="author" content="RelaxSound Studio">
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://www.relaxsound.studio/">
@@ -22,9 +22,7 @@
         <meta name="twitter:title" content="RelaxSound | Free Meditation & Ambient Sounds">
         <meta name="twitter:description" content="Relax your mind with nature-inspired ambient and meditation sounds. 100% free to use — calm, focus, or sleep better today.">
         <meta name="twitter:image" content="https://www.relaxsound.studio/relaxsound-preview.jpg">
-        
         <link rel="icon" type="image/png" href="icon.png">
-        
         <link rel="stylesheet" href="/src/style.css">
     </head>
     <body>
@@ -161,21 +159,43 @@
                         class="sound-slider"
                     >
                 </div>
-                    <!-- Floating Info Button -->
-                    <button id="infoFloatBtn" class="info-float-btn" aria-label="Project info" title="Info">i</button>
-
-                    <!-- Info Modal -->
-                    <div id="infoModal" class="info-modal" aria-hidden="true">
-                        <div class="info-modal-content" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
-                            <button class="info-close-btn" id="infoCloseBtn" aria-label="Close info">×</button>
-                            <h4 id="infoTitle">⚠️ Disclaimer</h4>
-                            <p>This project is for educational purposes only. All sounds belong to A Soft Murmur (Sleepy Rabbit LLC).</p>
-                        </div>
+                <!-- Floating Info Button -->
+                <button
+                    id="infoFloatBtn"
+                    class="info-float-btn"
+                    aria-label="Project info"
+                    title="Info"
+                >i</button>
+                <!-- Info Modal -->
+                <div id="infoModal" class="info-modal" aria-hidden="true">
+                    <div
+                        class="info-modal-content"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="infoTitle"
+                    >
+                        <button class="info-close-btn" id="infoCloseBtn" aria-label="Close info">×</button>
+                        <h4 id="infoTitle">⚠️ Disclaimer</h4>
+                        <p>This project is for educational purposes only. All sounds belong to A Soft Murmur (Sleepy Rabbit LLC).</p>
                     </div>
-                    <!-- Site credit -->
-                    <div id="siteCredit" class="site-credit">Develop by Laky</div>
+                </div>
+                <!-- Site credit -->
+                <div id="siteCredit" class="site-credit">Develop by Laky</div>
             </div>
         </div>
         <script type="module" src="/src/main.ts"></script>
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "name": "RelaxSound Studio",
+        "url": "https://www.relaxsound.studio/",
+        "description": "Free relaxing ambient and meditation sounds for sleep, focus, and mindfulness.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RelaxSound Studio"
+        }
+        }
+        </script>
     </body>
 </html>
