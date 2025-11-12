@@ -46,10 +46,6 @@ class AmbientSoundMixer {
       this.updateAllVolumes();
     });
 
-    // Mute button in header
-    const muteBtn = document.getElementById('muteBtn') as HTMLButtonElement;
-    muteBtn?.addEventListener('click', () => this.toggleMute());
-
     // Mute button in controls
     const muteControlBtn = document.getElementById('muteControlBtn') as HTMLButtonElement;
     muteControlBtn?.addEventListener('click', () => this.toggleMute());
@@ -118,7 +114,6 @@ class AmbientSoundMixer {
 
   private toggleMute() {
     this.isMuted = !this.isMuted;
-    const muteBtn = document.getElementById('muteBtn') as HTMLButtonElement;
     const muteControlBtn = document.getElementById('muteControlBtn') as HTMLButtonElement;
 
     this.audioElements.forEach((audio) => {
@@ -126,11 +121,9 @@ class AmbientSoundMixer {
     });
 
     if (this.isMuted) {
-      muteBtn.classList.add('active');
-      muteControlBtn.classList.add('muted');
+      muteControlBtn?.classList.add('muted');
     } else {
-      muteBtn.classList.remove('active');
-      muteControlBtn.classList.remove('muted');
+      muteControlBtn?.classList.remove('muted');
     }
   }
 
